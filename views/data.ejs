@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>            
+    <title>Data</title>
+</head>
+<body>
+    <div class="ui one column grid container">
+      <h1>Persons</h1>
+    <table class="ui celled striped table">
+        <thead>
+          <tr><th colspan="1">
+            Name
+          </th>
+          <th colspan="1">
+            Last Name
+          </th>
+          <th colspan="1">
+            Age
+          </th>
+          <th colspan="1">
+            Mobile Number
+          </th>
+          <th colspan="1">
+            Country of origin
+          </th>
+          <th colspan="1">
+            Country of Residence
+          </th>
+        </tr></thead>
+        <tbody>          
+          <% data.forEach((person) => { %>            
+          <tr>            
+            <td><%= person.name %></td>            
+            <td><%= person.lastName %></td>
+            <td class="collapsing"><%= person.age %></td>
+            <td class="collapsing"><%= person.mobileNumber %></td>
+            <td><%= person.countryOrigin %></td>
+            <td><%= person.countryResidence %></td>
+          </tr>          
+          <% }) %>
+        </tbody>
+      </table>
+      <a href="/" class="ui button">Go Back</a>  
+    </div>    
+</body>
+</html>

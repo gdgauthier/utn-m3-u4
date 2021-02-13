@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>            
+    <title>Form</title>
+</head>
+<body>    
+    <div class="ui one column grid container">    
+    <form class="ui form" method="POST" action="/">
+        <h1>Create new Person</h1>
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="name" placeholder="First Name">
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name">
+        </div>
+        <div class="field">
+            <label>Age</label>
+            <input type="number" name="age" placeholder="Age">
+        </div>
+        <div class="field">
+            <label>Mobile Number</label>
+            <input type="number" name="mobileNumber" placeholder="Mobile Number">
+        </div>
+        <div class="field">
+            <label>Country of Origin</label>
+            <input type="text" name="countryOrigin" placeholder="Country of Origin">
+        </div> 
+        <div class="field">
+            <label>Country of Residence</label>
+            <input type="text" name="countryResidence" placeholder="Country of Residence">
+        </div>       
+        <button class="ui button" type="submit">Create</button><br><br>
+        <a href="/data" class="ui button">List Persons</a>  
+    </form>
+</div>
+</body>
+</html>
