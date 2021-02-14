@@ -32,16 +32,27 @@
           <th colspan="1">
             Country of Residence
           </th>
+          <th>
+            Actions
+          </th>          
         </tr></thead>
         <tbody>          
           <% data.forEach((person) => { %>            
           <tr>            
-            <td><%= person.name %></td>            
-            <td><%= person.lastName %></td>
+            <td class="collapsing"><%= person.name %></td>            
+            <td class="collapsing"><%= person.lastName %></td>
             <td class="collapsing"><%= person.age %></td>
             <td class="collapsing"><%= person.mobileNumber %></td>
-            <td><%= person.countryOrigin %></td>
-            <td><%= person.countryResidence %></td>
+            <td class="collapsing"><%= person.countryOrigin %></td>
+            <td class="collapsing"><%= person.countryResidence %></td>            
+            <td class="collapsing">
+              <div class="ui buttons">
+                <a href="/data/<%= person.id %>" class="ui primary button ">Edit</a>
+                <form action="/data/<%= person.id %>?_method=DELETE" method="POST">
+                  <button onclick="if (!confirm ('Record will be DELETED!')) { return false }" class="ui red button b-edit">Delete</button>  
+                </form>
+              </div>
+            </td>
           </tr>          
           <% }) %>
         </tbody>
